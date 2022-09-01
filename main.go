@@ -49,7 +49,7 @@ func removeElement(index int) {
 	defer f.Close()
 
 	for i, line := range(lines) {
-		if i == index {
+		if i == index || line == "" {
 			continue
 		}
 		_, err = f.Write([]byte(line + "\n"))
